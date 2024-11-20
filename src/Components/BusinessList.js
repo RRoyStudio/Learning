@@ -3,12 +3,24 @@ import InsideCraft from "./assets/InsideCraft.jpg";
 import "./Business.css";
 import Businesses from "./Business"; 
 
-function BusinessList() {
-    React.cloneElement(<Businesses/>, {Businesses, key: index})
 
+function itemList({Businesses}){
     return (
-        <div className="Business-List">
-         {BusinessList}
-        </div>
-    );
+        <li>{Businesses}</li>
+    )
 }
+function BusinessArray() {
+const Items=[{Businesses}];
+
+return (
+    <ul>
+    {Items.map((Item, index)=> ( 
+       <ItemList key={index} Businesses={Item} /> 
+    ))}
+    </ul>
+);
+};
+
+
+
+

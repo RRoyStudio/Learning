@@ -2,13 +2,13 @@ import React from "react";
 import InsideCraft from "./assets/InsideCraft.jpg";
 import "./Business.css";
 
-const image= InsideCraft
-const name= 'Craft Beers'
-const address= 'This is the Address'
-const phone= '(000) 000-0000'
-const category= 'Bar and Grill'
-const rating= '5/5'
-const reviewCount= '1000'
+const image= [InsideCraft,]
+const name= ['Craft Beers', 'Inside Craft']
+const address= ['This is the Address', 'address 2']
+const phone= ['(000) 000-0000','(000) 000-0000']
+const category= ['Bar and Grill', 'Bar and Grill']
+const rating= ['5/5', '5/5']
+const reviewCount= ['1000', '1000']
 
 
 function BusinessImage() {
@@ -41,6 +41,7 @@ function BusinessReviewCount() {
 function Businesses() {
     return (
         <div className='Business-Card'>
+            <li>
             <BusinessImage alt='inside of the resturant'/>
             <BusinessNames />
             <BusinessAddress />
@@ -48,6 +49,7 @@ function Businesses() {
             <BusinessCategory />
             <BusinessRating />
             <BusinessReviewCount />  
+            </li>
         </div>
     )
 };
