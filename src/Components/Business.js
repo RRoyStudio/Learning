@@ -2,44 +2,52 @@ import React from "react";
 import InsideCraft from "./assets/InsideCraft.jpg";
 import "./Business.css";
 
+const image= InsideCraft
+const name= 'Craft Beers'
+const address= 'This is the Address'
+const phone= '(000) 000-0000'
+const category= 'Bar and Grill'
+const rating= '5/5'
+const reviewCount= '1000'
 
-function BusinessImage(props) {
-    return <img src={props.image} className="Business-image" />
-}
-function BusinessNames(props) {
-    return <h1 className="Business-name">{props.name}</h1>
-}
 
-function BusinessAddress(props) {
-    return <p className="Business-address">{props.address}</p>
+function BusinessImage() {
+    return <img src= {image} className="Business-image" />
 }
-
-function BusinessPhone(props) {
-    return <p className="Business-phone">{props.phone}</p>
-}
-
-function BusinessCategory(props) {
-    return <p className="Business-category">Category: {props.category}</p>
+function BusinessNames() {
+    return <h1 className="Business-name">{name}</h1>
 }
 
-function BusinessRating(props) {
-    return <p className="Business-rating">Rating on Yelp: {props.rating}</p>
+function BusinessAddress() {
+    return <p className="Business-address">{address}</p>
+}
+
+function BusinessPhone() {
+    return <p className="Business-phone">{phone}</p>
+}
+
+function BusinessCategory() {
+    return <p className="Business-category">Category: {category}</p>
+}
+
+function BusinessRating() {
+    return <p className="Business-rating">Rating on Yelp: {rating}</p>
 }    
 
-function BusinessReviewCount(props) {
-    return <p className="Business-reviewCount"> Reviews: ({props.reviewCount})</p>
+function BusinessReviewCount() {
+    return <p className="Business-reviewCount"> Reviews: ({reviewCount})</p>
 }   
 
 function Businesses() {
     return (
         <div className='Business-Card'>
-            <BusinessImage image= {InsideCraft} alt="image of inside Craft Beers"/>
-            <BusinessNames name="Craft Beers"/>
-            <BusinessAddress address="This is the Address"/>
-            <BusinessPhone phone="(000) 000-0000"/>
-            <BusinessCategory category="Bar and Grill"/>
-            <BusinessRating rating="5/5"/>
-            <BusinessReviewCount reviewCount="1000"/>  
+            <BusinessImage alt='inside of the resturant'/>
+            <BusinessNames />
+            <BusinessAddress />
+            <BusinessPhone />
+            <BusinessCategory />
+            <BusinessRating />
+            <BusinessReviewCount />  
         </div>
     )
 };
